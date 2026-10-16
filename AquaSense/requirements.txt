@@ -1,0 +1,20 @@
+streamlit>=1.36
+opencv-python>=4.8
+numpy>=1.26
+pandas>=2.0
+torch>=2.1
+torchvision>=0.16
+Pillow>=10.0
+# Optional deployment / research integrations:
+onnx>=1.16
+onnxruntime>=1.18
+# NVIDIA TensorRT is normally installed from NVIDIA's supported package/index.
+# tensorrt
+# OpenDrift has platform/data-reader dependencies; install when needed.
+# Enterprise API, Agent & GIS dependencies:
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+psutil>=5.9
+folium>=0.16
+streamlit-folium>=0.20

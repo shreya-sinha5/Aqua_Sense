@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "9f5b18f8-a63a-4519-851a-b196f6a33d55",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "D:\\Documents\\AquaSense\\AquaSense\\.archify\\architecture-aquasense-20261005-180000\\candidate.json",
+  "output": "D:\\Documents\\AquaSense\\AquaSense\\.archify\\architecture-aquasense-20261005-180000\\aquasense.html",
+  "specification": {
+    "sha256": "41d7fed364652842d0647e3feef13be35558a496180b473f3eb97ab7f593da74",
+    "bytes": 13465
+  },
+  "artifact": {
+    "sha256": "530b911a4869cf960837e73af8ab1e9e2ffd7d394271e3e6f2ac0f799c10bb69",
+    "bytes": 809394
+  }
+}

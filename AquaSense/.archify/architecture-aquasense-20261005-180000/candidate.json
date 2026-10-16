@@ -1,0 +1,720 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "AquaSense — Autonomous Underwater AI System",
+    "subtitle": "Dual-stage anomaly detection · Multi-agent advisory · Air-gapped sonar platform",
+    "output": ".archify/architecture-aquasense-20261005-180000/aquasense.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "operator",
+      "type": "external",
+      "label": "AUV Operator",
+      "sublabel": "Human-in-loop",
+      "pos": [
+        30,
+        440
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "sonar",
+      "type": "external",
+      "label": "Sonar Array",
+      "sublabel": "Side-scan/multibeam",
+      "pos": [
+        30,
+        560
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "dashboard",
+      "type": "frontend",
+      "label": "Streamlit Dashboard",
+      "sublabel": "dashboard.py",
+      "pos": [
+        260,
+        440
+      ],
+      "size": [
+        130,
+        56
+      ],
+      "tag": "Ops UI"
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI REST API",
+      "sublabel": "api.py · :8000",
+      "pos": [
+        260,
+        556
+      ],
+      "size": [
+        130,
+        56
+      ],
+      "tag": "Air-gapped"
+    },
+    {
+      "id": "security",
+      "type": "security",
+      "label": "Security Layer",
+      "sublabel": "security.py",
+      "pos": [
+        260,
+        250
+      ],
+      "size": [
+        130,
+        56
+      ],
+      "tag": "SECRET//NOFORN"
+    },
+    {
+      "id": "sonar_bus",
+      "type": "backend",
+      "label": "Sonar Bus",
+      "sublabel": "sonar_bus.py",
+      "pos": [
+        260,
+        680
+      ],
+      "size": [
+        130,
+        52
+      ]
+    },
+    {
+      "id": "agents",
+      "type": "backend",
+      "label": "AUV Agents",
+      "sublabel": "agents.py",
+      "pos": [
+        470,
+        440
+      ],
+      "size": [
+        130,
+        56
+      ],
+      "tag": "3 agents"
+    },
+    {
+      "id": "agent1",
+      "type": "backend",
+      "label": "Nav Agent",
+      "sublabel": "P1/P2/P3",
+      "pos": [
+        370,
+        100
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "agent2",
+      "type": "backend",
+      "label": "Risk Agent",
+      "sublabel": "Env risk",
+      "pos": [
+        510,
+        100
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "agent3",
+      "type": "backend",
+      "label": "Briefing Agent",
+      "sublabel": "Mission",
+      "pos": [
+        650,
+        100
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "preprocessing",
+      "type": "backend",
+      "label": "Preprocessing",
+      "sublabel": "preprocessing.py",
+      "pos": [
+        470,
+        556
+      ],
+      "size": [
+        130,
+        52
+      ]
+    },
+    {
+      "id": "infer",
+      "type": "backend",
+      "label": "Inference Engine",
+      "sublabel": "infer.py Stage 1+2",
+      "pos": [
+        680,
+        498
+      ],
+      "size": [
+        140,
+        56
+      ],
+      "tag": "Dual-stage"
+    },
+    {
+      "id": "model",
+      "type": "database",
+      "label": "ConvAutoencoder",
+      "sublabel": "model.py · .pth",
+      "pos": [
+        680,
+        350
+      ],
+      "size": [
+        140,
+        56
+      ],
+      "tag": "MSE"
+    },
+    {
+      "id": "features",
+      "type": "backend",
+      "label": "Feature Extractor",
+      "sublabel": "features.py",
+      "pos": [
+        890,
+        556
+      ],
+      "size": [
+        110,
+        52
+      ],
+      "tag": "Stage 2"
+    },
+    {
+      "id": "confidence",
+      "type": "backend",
+      "label": "Confidence",
+      "sublabel": "confidence.py",
+      "pos": [
+        890,
+        370
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "geotagging",
+      "type": "backend",
+      "label": "Geotagging",
+      "sublabel": "geotagging.py",
+      "pos": [
+        890,
+        250
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "telemetry",
+      "type": "backend",
+      "label": "Telemetry",
+      "sublabel": "telemetry.py",
+      "pos": [
+        470,
+        680
+      ],
+      "size": [
+        130,
+        52
+      ],
+      "tag": "Acoustic BW"
+    },
+    {
+      "id": "logger",
+      "type": "database",
+      "label": "Event Logger",
+      "sublabel": "logger.py · CSV",
+      "pos": [
+        680,
+        680
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "heatmap",
+      "type": "frontend",
+      "label": "Heatmap",
+      "sublabel": "heatmap.py",
+      "pos": [
+        890,
+        680
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "acoustic",
+      "type": "backend",
+      "label": "Acoustic Physics",
+      "sublabel": "acoustic_physics.py",
+      "pos": [
+        1026,
+        556
+      ],
+      "size": [
+        118,
+        56
+      ],
+      "tag": "SSP·SLAM"
+    },
+    {
+      "id": "vehicle",
+      "type": "backend",
+      "label": "Vehicle Dynamics",
+      "sublabel": "vehicle_dynamics.py",
+      "pos": [
+        1026,
+        370
+      ],
+      "size": [
+        118,
+        56
+      ],
+      "tag": "6-DOF·MPC"
+    },
+    {
+      "id": "space_surv",
+      "type": "backend",
+      "label": "Space Surv.",
+      "sublabel": "space_surveillance.py",
+      "pos": [
+        1026,
+        250
+      ],
+      "size": [
+        118,
+        52
+      ],
+      "tag": "SAR·AIS"
+    },
+    {
+      "id": "subsea_nav",
+      "type": "backend",
+      "label": "Subsea Nav",
+      "sublabel": "subsea_navigation.py",
+      "pos": [
+        1026,
+        680
+      ],
+      "size": [
+        118,
+        52
+      ]
+    },
+    {
+      "id": "temporal",
+      "type": "backend",
+      "label": "Temporal AI",
+      "sublabel": "temporal_ai.py",
+      "pos": [
+        680,
+        820
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "accumulation",
+      "type": "backend",
+      "label": "Accumulation",
+      "sublabel": "accumulation.py",
+      "pos": [
+        890,
+        820
+      ],
+      "size": [
+        110,
+        52
+      ]
+    },
+    {
+      "id": "data_store",
+      "type": "database",
+      "label": "Data Store",
+      "sublabel": "data/ · models/",
+      "pos": [
+        470,
+        820
+      ],
+      "size": [
+        130,
+        52
+      ],
+      "tag": "CSVs·wts"
+    },
+    {
+      "id": "train",
+      "type": "backend",
+      "label": "Training Pipeline",
+      "sublabel": "train.py",
+      "pos": [
+        260,
+        820
+      ],
+      "size": [
+        140,
+        52
+      ],
+      "tag": "Offline"
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "security-group",
+      "label": "Air-Gapped Defense — SECRET//NOFORN",
+      "wraps": [
+        "api",
+        "security",
+        "dashboard",
+        "sonar_bus",
+        "telemetry"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Dual-Stage AI Inference Pipeline",
+      "wraps": [
+        "preprocessing",
+        "infer",
+        "model",
+        "features",
+        "confidence",
+        "geotagging"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Multi-Agent Advisory System",
+      "wraps": [
+        "agents",
+        "agent1",
+        "agent2",
+        "agent3"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Advanced Sensing & Navigation",
+      "wraps": [
+        "acoustic",
+        "vehicle",
+        "space_surv",
+        "subsea_nav"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Data & Analytics Layer",
+      "wraps": [
+        "logger",
+        "heatmap",
+        "temporal",
+        "accumulation",
+        "data_store",
+        "train"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "op-dash",
+      "from": "operator",
+      "to": "dashboard",
+      "label": "monitors",
+      "variant": "emphasis"
+    },
+    {
+      "id": "sonar-bus",
+      "from": "sonar",
+      "to": "sonar_bus",
+      "label": "raw frames",
+      "variant": "emphasis"
+    },
+    {
+      "id": "sonar-bus-api",
+      "from": "sonar_bus",
+      "to": "api",
+      "label": "frame",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "dash-infer",
+      "from": "dashboard",
+      "to": "infer",
+      "label": "run inference",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-auth",
+      "from": "api",
+      "to": "security",
+      "label": "HMAC verify",
+      "variant": "security",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "api-preproc",
+      "from": "api",
+      "to": "preprocessing",
+      "label": "sonar frame"
+    },
+    {
+      "id": "preproc-infer",
+      "from": "preprocessing",
+      "to": "infer",
+      "label": "cleaned",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "infer-model",
+      "from": "infer",
+      "to": "model",
+      "label": "MSE",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "infer-features",
+      "from": "infer",
+      "to": "features",
+      "label": "Stage 2"
+    },
+    {
+      "id": "features-conf",
+      "from": "features",
+      "to": "confidence",
+      "label": "score",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "conf-geo",
+      "from": "confidence",
+      "to": "geotagging",
+      "label": "geotag",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "infer-agents",
+      "from": "infer",
+      "to": "agents",
+      "label": "anomaly",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "agents-a1",
+      "from": "agents",
+      "to": "agent1",
+      "label": "nav",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "agents-a2",
+      "from": "agents",
+      "to": "agent2",
+      "label": "risk",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "agents-a3",
+      "from": "agents",
+      "to": "agent3",
+      "label": "brief",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "agents-dash",
+      "from": "agents",
+      "to": "dashboard",
+      "label": "directives",
+      "variant": "dashed"
+    },
+    {
+      "id": "infer-acoustic",
+      "from": "infer",
+      "to": "acoustic",
+      "label": "positioning"
+    },
+    {
+      "id": "infer-vehicle",
+      "from": "infer",
+      "to": "vehicle",
+      "label": "control",
+      "variant": "dashed"
+    },
+    {
+      "id": "geo-space",
+      "from": "geotagging",
+      "to": "space_surv",
+      "label": "SAR/AIS"
+    },
+    {
+      "id": "acoustic-subsea",
+      "from": "acoustic",
+      "to": "subsea_nav",
+      "label": "SLAM drift",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "infer-logger",
+      "from": "infer",
+      "to": "logger",
+      "label": "event",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "logger-heatmap",
+      "from": "logger",
+      "to": "heatmap",
+      "label": "geo-events",
+      "variant": "dashed"
+    },
+    {
+      "id": "infer-telemetry",
+      "from": "infer",
+      "to": "telemetry",
+      "label": "packet",
+      "variant": "dashed",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "logger-temporal",
+      "from": "logger",
+      "to": "temporal",
+      "label": "CSV",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "temporal-accum",
+      "from": "temporal",
+      "to": "accumulation",
+      "label": "trends"
+    },
+    {
+      "id": "logger-data",
+      "from": "logger",
+      "to": "data_store",
+      "label": "persist",
+      "variant": "dashed"
+    },
+    {
+      "id": "train-model",
+      "from": "train",
+      "to": "model",
+      "label": "weights",
+      "variant": "dashed"
+    },
+    {
+      "id": "train-data",
+      "from": "train",
+      "to": "data_store",
+      "label": "reads"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Sensing & Input",
+      "items": [
+        "Side-scan / multibeam sonar frames",
+        "SonarBusAdapter frame translation",
+        "clean_sonar_frame() preprocessing",
+        "Ultra-low BW acoustic telemetry"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "AI Inference Pipeline",
+      "items": [
+        "Stage 1: ConvAutoencoder MSE anomaly",
+        "Stage 2: Otsu contours + features",
+        "CalibratedConfidenceScorer fusion",
+        "True seabed geotag projection"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Multi-Agent Advisory",
+      "items": [
+        "Agent 1 — Navigation: P1/P2/P3",
+        "Agent 2 — Environmental Risk",
+        "Agent 3 — Mission Briefing",
+        "Deterministic · LLM-free · Offline"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Advanced Sensing",
+      "items": [
+        "Acoustic: SSP, ray-tracing, LBL/USBL SLAM",
+        "6-DOF Fossen hydrodynamics + MPC",
+        "MAVLink autopilot bridge",
+        "SAR / AIS maritime fusion"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Security Posture",
+      "items": [
+        "Air-gapped loopback CORS only",
+        "HMAC-SHA256 tactical token auth",
+        "SECRET // NOFORN classification",
+        "Swagger/ReDoc disabled in ops mode"
+      ]
+    }
+  ]
+}

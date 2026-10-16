@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+AquaSense/venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime test logs & saved detection frames
+AquaSense/data/logs/saved_images/
+AquaSense/data/live_sessions/
+data/logs/saved_images/
+data/live_sessions/
+*.log
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*

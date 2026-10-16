@@ -1,0 +1,10 @@
+{
+    "clean_images": 167,
+    "training_images": 134,
+    "validation_images": 33,
+    "epochs": 30,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "final_training_loss": 0.010251734509236284,
+    "final_validation_loss": 0.008761065701643625
+}

@@ -1,0 +1,10 @@
+{
+    "threshold": 0.026747147976611808,
+    "method": "Mean(MSE_clean) + 3 * StdDev(MSE_clean)",
+    "mean_validation_error": 0.008665598907761952,
+    "std_validation_error": 0.006027183022949952,
+    "multiplier": 3.0,
+    "validation_images": 33,
+    "min_validation_error": 0.0004525495460256934,
+    "max_validation_error": 0.029712961986660957
+}

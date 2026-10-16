@@ -1,0 +1,11 @@
+timestamp,object,severity,risk_percent,anomaly_score,material,depth_m,latitude,longitude,geo_coordinates,highlight_ratio,action
+2026-09-07 19:10:59,Marine Life / Seafloor Baseline,CLEAR,5,0.0032293598633259535,Organic Silt / Natural Seabed Sand,25.0,12.2958,76.6394,"12.295800, 76.639400",0.0,BYPASS
+2026-09-07 19:18:46,Unclassified Submerged Threat,CRITICAL,85,0.027305828407406807,Unclassified Submerged Debris,31.5,12.2958,76.6394,"12.295800, 76.639400",71.988525390625,ALERT
+2026-09-08 00:25:28,Shipwreck Frame / Linear Debris,CRITICAL,92,0.0168550256639719,Structural Steel / Metal Frame,25.0,12.2958,76.6394,"12.295800, 76.639400",49.869873046875,ALERT
+2026-09-08 02:20:54,Submerged Aircraft Component,CRITICAL,88,0.023445557802915573,Aeronautical Alloy / Airframe,25.0,12.2958,76.6394,"12.295800, 76.639400",86.687255859375,ALERT
+2026-09-08 12:21:38,Marine Life / Seafloor Baseline,CLEAR,5,0.004683446139097214,Organic Silt / Natural Seabed Sand,25.0,12.2958,76.6394,"12.295800, 76.639400",0.0,BYPASS
+2026-09-08 12:23:18,Unclassified Submerged Threat,CRITICAL,85,0.011308928020298481,Unclassified Submerged Debris,25.0,12.2958,76.6394,"12.295800, 76.639400",59.00390625000001,ALERT
+2026-09-08 13:14:32,Unclassified Submerged Threat,CRITICAL,85,0.011308928020298481,Unclassified Submerged Debris,25.0,12.2958,76.6394,"12.295800, 76.639400",59.00390625000001,ALERT
+2026-09-08 13:43:09,Submerged Aircraft Component,CRITICAL,88,0.006498454604297876,Aeronautical Alloy / Airframe,25.0,12.2958,76.6394,"12.295800, 76.639400",5.810546875,ALERT
+2026-10-16 22:10:52,Marine Life / Seafloor Baseline,CLEAR,5,0.0013160790549591184,Organic Silt / Natural Seabed Sand,25.0,12.2958,76.6394,"12.295800, 76.639400",0.0,BYPASS
+2026-10-16 22:17:23,Marine Life / Seafloor Baseline,CLEAR,5,0.0013160790549591184,Organic Silt / Natural Seabed Sand,25.0,12.2958,76.6394,"12.295800, 76.639400",0.0,BYPASS
