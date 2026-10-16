@@ -203,5 +203,5 @@ MIT License
 ---
 
 <div align="center">
-<sub>Built for deep-sea missions. Engineered for zero-missed detections.</sub>
+<sub>Built for deep-sea missions. Engineered for zero missed detections.</sub>
 </div>
